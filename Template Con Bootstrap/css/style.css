@@ -1,0 +1,162 @@
+:root{
+    --dark_color : #19283f;
+    --verde_color : #ff941b;
+    --rojo_color : #ff3150;
+    --clair_color : #33d1cc;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fontGoogle/Kanit/Kanit-Italic.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+/* ----------------- Start NavBar -------------- */
+.navbar {
+    background-color: var(--dark_color);
+}
+.navbar .nav-item .nav-link {
+    color: white !important;
+}
+.navbar .nav-item .nav-link.active,
+.navbar .nav-item .nav-link:focus,
+.navbar .nav-item .nav-link:hover{
+    color:var(--clair_color) !important;
+}
+.navbar .search svg{
+    color: var(--clair_color);
+    padding-left: 20px;
+    border-left: 1px solid var(--clair_color);
+}
+.navbar .container .navbar-toggler{
+    color: white;
+    font-size: 20px;
+    border: white solid 2px;
+}
+.navbar .container .navbar-toggler:focus{
+    box-shadow: none;
+}
+
+/* ----------------- End NavBar -------------- */
+/* ----------------- Start Landing -------------- */
+.Landing {
+    background-color: var(--dark_color);
+    min-height: 300px;
+}
+.Landing h1{
+    font-size: 50px !important;
+}
+
+/* ----------------- End Landing -------------- */
+
+/* ----------------- Start Features -------------- */
+.main-Title::after{
+    content: '';
+    position: absolute;
+    background-color: var(--clair_color);
+    width: 200px;
+    height:1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.Features .row .icon-holder{
+    height: 300px;
+}
+.Features .row .icon-holder svg{
+    left: 50%;
+    transform: translate(-50%);
+}
+.Features .row .icon-holder .number{
+    font-size: 250px;
+    color: #e7ebec; 
+}
+.Features .row .icon-holder .icon{
+    font-size: 100px;
+    bottom: 15px !important;
+    color: var(--clair_color);  
+}
+.Features .row .feat h1{
+    color: var(--verde_color);
+}
+/* ----------------- End Features -------------- */
+/* ----------------- Start Our Work -------------- */
+.Our-Work{
+    background-color: #e7ebec ; 
+}
+.Our-Work ul li{
+    padding: 5px 10px;
+    color: var(--dark_color);
+    transition: 0.3s;
+}
+.Our-Work ul li.active{
+    background-color: var(--rojo_color);
+    color: yellow;   
+}
+.Our-Work ul li:not(.active):hover{
+    color: var(--rojo_color);   
+}
+.Our-Work .box-foto{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.Our-Work .box-foto img{
+    width: 100%;
+}
+.Our-Work .box-foto::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: #33d1cc;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateX(calc(-100% - 10px));
+    transition: 0.3s;
+}
+.Our-Work .box-foto:hover:before{
+    transform: translateX(0);
+
+}
+/* ----------------- End Our Work -------------- */
+.Team .feat{
+    /* max-width: 250px; */
+    height: 400px;
+}
+/* ----------------- Start Advertice -------------- */
+.Advertice{
+    background-color: #19283f;
+}
+/* ----------------- End Advertice -------------- */
+
+/* ----------------- Start NewLetter -------------- */
+.NewLetter{
+    background-color: #ffc400;
+}
+.NewLetter input[type="text"]{
+    outline: none;
+}
+.NewLetter input::placeholder{
+    color: #fff;
+    padding-left: 5px;
+}
+/* ----------------- End NewLetter -------------- */
+/* ----------------- Start Footer -------------- */
+.Footer{
+    background-color: #19283f;
+}
+.Footer p > span{
+    color: #ffc400;
+}
+.Footer div > ul{
+    line-height: 50px ;
+} 
+/* ----------------- End Footer -------------- */
